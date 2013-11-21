@@ -1,3 +1,8 @@
+molindo-maven-download
+======================
+
+Simple POM to download artifacts from Maven repos
+
 Usage
 -----
 
