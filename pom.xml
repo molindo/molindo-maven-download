@@ -11,7 +11,7 @@
 	<artifactId>molindo-maven-download</artifactId>
 	<version>1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	
+
 	<description>Simple POM to download artifacts from Maven repos</description>
 	<url>http://github.com/molindo/molindo-maven-download</url>
 
@@ -28,7 +28,7 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -36,10 +36,10 @@
 				<artifactId>maven-dependency-plugin</artifactId>
 				<executions>
 					<execution>
+						<phase>package</phase>
 						<goals>
 							<goal>copy</goal>
 						</goals>
-						<phase>package</phase>
 						<configuration>
 							<artifactItems>
 								<artifactItem>
@@ -58,10 +58,11 @@
 	</build>
 
 	<properties>
-		<download.group>at.molindo</download.group>
-		<download.artifact></download.artifact>
-		<download.version></download.version>
-		<download.type>war</download.type>
+		<!-- defaults to downloading itself for easy releases -->
+		<download.group>${project.groupId}</download.group>
+		<download.artifact>${project.artifactId}</download.artifact>
+		<download.version>${project.version}</download.version>
+		<download.type>pom</download.type>
 	</properties>
 </project>
 
