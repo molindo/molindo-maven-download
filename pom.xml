@@ -4,15 +4,31 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>at.molindo</groupId>
-		<artifactId>molindo-private-pom</artifactId>
-		<version>1-alpha-3</version>
-		<relativePath></relativePath>
+		<artifactId>molindo-oss-pom</artifactId>
+		<version>4</version>
 	</parent>
 
 	<artifactId>molindo-maven-download</artifactId>
 	<version>1-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	
+	<description>Simple POM to download artifacts from Maven repos</description>
+	<url>http://github.com/molindo/molindo-maven-download</url>
 
+	<scm>
+		<connection>scm:git:git@github.com:molindo/molindo-maven-download.git</connection>
+		<developerConnection>scm:git:git@github.com:molindo/molindo-maven-download.git</developerConnection>
+		<url>git@github.com:molindo/molindo-maven-download.git</url>
+	</scm>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	
 	<build>
 		<plugins>
 			<plugin>
